@@ -6,15 +6,13 @@ export default function Home() {
   return (
     <div>
       <NextSeo
-          title={SITE_TITLE}
-          description={SITE_DESCRIPTION}
           openGraph={{
             url: process.env.NEXT_PUBLIC_SITE_URL,
             title: SITE_TITLE,
             description: SITE_DESCRIPTION,
             images: [
               {
-                url: '/images/avatar.png',
+                url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/avatar.png`,
                 width: 192,
                 height: 192,
                 alt: 'user avatar',
