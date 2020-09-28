@@ -9,7 +9,7 @@ export default function Home() {
           description={SITE_DESCRIPTION}
           openGraph={{
             url: process.env.NEXT_PUBLIC_SITE_URL,
-            title: SITE_TITLE,
+            title: `${SITE_TITLE} | Arnol Codes`,
             description: SITE_DESCRIPTION,
             images: [
               {
@@ -20,6 +20,14 @@ export default function Home() {
               },
             ]
           }}
+          additionalMetaTags={[{
+            property: 'twitter:image',
+            content: `${process.env.NEXT_PUBLIC_SITE_URL}/images/avatar.png`
+          },
+          {
+            property: 'twitter:image',
+            content: `${process.env.NEXT_PUBLIC_SITE_URL}/images/avatar.png`
+          }]}
         />
       <p>Home</p>
     </div>
