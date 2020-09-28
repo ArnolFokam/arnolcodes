@@ -13,7 +13,7 @@ const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 const { nextI18NextRewrites } = require('next-i18next/rewrites')
 
 const localeSubpaths = {
-  fr: 'fr'
+  fr: 'fr',
 }
 
 module.exports = {
