@@ -1,5 +1,7 @@
 import '../styles/globals.css'
 import Head from 'next/head'
+import { DefaultSeo } from 'next-seo' 
+import SEO from '../next-seo.config'
 
 function MyApp({ Component, pageProps }) {
   return <>
@@ -11,7 +13,7 @@ function MyApp({ Component, pageProps }) {
 
       - use google inspection tool for canonical urls 
       */}
-      <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
+            <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
       <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
       <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
@@ -21,18 +23,20 @@ function MyApp({ Component, pageProps }) {
       <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png" />
       <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
+      <link rel="icon" type="image/png" sizes="36x36" href="/android-icon-36x36.png" />
+      <link rel="icon" type="image/png" sizes="48x48" href="/android-icon-48x48.png" />
+      <link rel="icon" type="image/png" sizes="72x72" href="/android-icon-72x72.png" />
+      <link rel="icon" type="image/png" sizes="96x96" href="/android-icon-96x96.png" />
+      <link rel="icon" type="image/png" sizes="144x144" href="/android-icon-144x144.png" />
       <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/manifest.json" />
-      <meta name="msapplication-TileColor" content="#ffffff" />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-      <meta name="application-name" content="arnolcodes"/>
-        <meta name="apple-mobile-web-app-title" content="arnolcodes"/>
-      <meta name="apple-mobile-web-app-title" content="arnolcodes" />
-      <meta id="viewport" name="viewport" content="width=device-width,minimum-scale=0.8,maximum-scale=1,user-scalable=no" />
     </Head>
+    <DefaultSeo {...SEO} />
     <Component {...pageProps} />
   </>
 }

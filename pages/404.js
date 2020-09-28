@@ -1,15 +1,10 @@
 import Head from 'next/head'
+import { NextSeo } from 'next-seo'
 
 export default function NotFound() {
     return (
       <div>
-        <Head>
-          <title>Page Not Found</title>
-          <meta name="title" content="Page Not Found" />
-          <meta 
-          name="description" 
-          content={process.env.description} />
-        </Head>
+        <NextSeo title='Page Not Found' description={process.env.description}/>
         <p>404</p>
       </div>
     )
