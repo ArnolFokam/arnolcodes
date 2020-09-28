@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../constants/site'
 

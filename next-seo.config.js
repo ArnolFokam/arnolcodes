@@ -1,6 +1,6 @@
 export default {
+    titleTemplate: '%s | Arnol Codes',
     openGraph: {
-        titleTemplate: '%s | Arnol Codes',
         type: 'website',
         url: process.env.NEXT_PUBLIC_SITE_URL,
         site_name: 'arnolcodes',
