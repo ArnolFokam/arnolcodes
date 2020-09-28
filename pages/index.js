@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Arnol codes | Full Stack Web Development</title>
       </Head>
       <NextSeo
           title={SITE_TITLE}
