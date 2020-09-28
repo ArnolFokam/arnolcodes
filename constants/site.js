@@ -1,2 +1,2 @@
 export const SITE_TITLE = 'Full Stack Web developer and kebab lover \uD83E\uDD59'
-export const SITE_DESCRIPTION = 'Personal Portfolio for blogging. I\'m a Full Stack Web developer &amp; a fan of the MERN stack.I\'m also a meme lover...Who doesn\'t love memes. Feel free to check my projects, blogposts etc Robots will never take down the world.'
+export const SITE_DESCRIPTION = 'Personal Portfolio for blogging. I\'m a Full Stack Web developer &amp; a fan of the MERN stack. Feel free to check my projects, ideas and contact me.'
