@@ -1,6 +1,8 @@
 import '../styles/globals.css'
+import App from 'next/app'
 import Head from 'next/head'
 import { DefaultSeo } from 'next-seo' 
+import { appWithTranslation } from '../i18n';
 import SEO from '../next-seo.config'
 
 function MyApp({ Component, pageProps }) {
@@ -42,4 +44,6 @@ function MyApp({ Component, pageProps }) {
   </>
 }
 
-export default MyApp
+MyApp.getInitialProps = async (appContext) => ({ ...await App.getInitialProps(appContext) })
+
+export default appWithTranslation(MyApp)

@@ -1,13 +1,24 @@
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 
-module.exports = (phase, { defaultConfig }) => {
+/*module.exports = (phase, { defaultConfig }) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
-      /* development only config options here */
     }
   }
 
   return {
-    /* config options for all phases except development here */
   }
+}*/
+
+const { nextI18NextRewrites } = require('next-i18next/rewrites')
+
+const localeSubpaths = {
+  fr: 'fr'
+}
+
+module.exports = {
+  rewrites: async () => nextI18NextRewrites(localeSubpaths),
+  publicRuntimeConfig: {
+    localeSubpaths,
+  },
 }
