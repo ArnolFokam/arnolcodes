@@ -8,8 +8,10 @@ function MyApp({ Component, pageProps }) {
       TODO:
       - add a theme-color, a backgroung color (manifest.json), tile color (browserconfig.xml)
       <meta name="theme-color" content="#ffffff" />
+
+      - use google inspection tool for canonical urls 
       */}
-      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
       <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
       <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />

@@ -1,17 +1,23 @@
 import Head from 'next/head'
+import { NextSeo } from 'next-seo'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../constants/site'
 
 export default function Home() {
   return (
     <div>
       <Head>
         <title>Arnol codes | Full Stack Web Development</title>
-        <meta name="title" content="Full Stack Web developer portfolio, A fan of the MERN stack" />
-        <meta 
-        name="description" 
-        content="Personal Portfolio for blogging. I'm a Full Stack Web developer &amp; a fan of the MERN stack.
-        I'm also a meme lover... Who doesn't like meme. Robots will never take down the world.
-        " />
       </Head>
+      <NextSeo
+          title={SITE_TITLE}
+          description={SITE_DESCRIPTION}
+          openGraph={{
+            url: process.env.NEXT_PUBLIC_SITE_URL,
+            title: SITE_TITLE,
+            description: SITE_DESCRIPTION
+          }}
+        />
+      <p>Home</p>
     </div>
   )
 }
