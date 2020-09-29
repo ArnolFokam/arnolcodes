@@ -1,19 +1,14 @@
-import PropTypes from 'prop-types'
 import { NextSeo } from 'next-seo'
-import { useContext } from 'react'
-import { I18nContext } from 'next-i18next'
-import { withTranslation, Trans } from '../i18n'
-import { SITE_TITLE, SITE_DESCRIPTION } from '../constants/site'
-import { AppProps } from 'next/app'
+import { Trans, I18nPage, useTranslation } from '../i18n'
 
-function Home() {
-  const { i18n: { language } } = useContext(I18nContext)
+const Home: I18nPage = () => {
+  const { t, i18n: { language } } = useTranslation();
 
   return (
     <div>
       <NextSeo
-        title={SITE_TITLE}
-        description={SITE_DESCRIPTION}
+        title={t('headers:home.title')}
+        description={t('headers:home.description')}
         languageAlternates={(() => {
           let alternates = [{
             hrefLang: 'x-default',
@@ -31,14 +26,14 @@ function Home() {
         })()}
         openGraph={{
           url: process.env.NEXT_PUBLIC_SITE_URL,
-          title: `${SITE_TITLE} | Arnol Codes`,
-          description: SITE_DESCRIPTION,
+          title: `${t('headers:home.title')} | Arnol Codes`,
+          description: t('headers:home.description'),
           images: [
             {
               url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/avatar.png`,
               width: 192,
               height: 192,
-              alt: 'user avatar',
+              alt: t('user avatar'),
             },
           ]
         }}
@@ -48,7 +43,7 @@ function Home() {
         },
         {
           property: 'twitter:image:alt',
-          content: 'Arnol\'s avatar'
+          content: t('headers:home.twitter:image:alt')
         }]}
       />
       <Trans i18nKey={'common:home'}/>
@@ -57,11 +52,7 @@ function Home() {
 }
 
 Home.getInitialProps = async () => ({
-  namespacesRequired: ['common'],
+  namespacesRequired: ['common', 'headers'],
 })
 
-Home.propTypes = {
-  t: PropTypes.func.isRequired,
-}
-
-export default withTranslation('common')(Home)
+export default Home
