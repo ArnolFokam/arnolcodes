@@ -2,10 +2,11 @@ import PropTypes from 'prop-types'
 import { NextSeo } from 'next-seo'
 import { useContext } from 'react'
 import { I18nContext } from 'next-i18next'
-import { withTranslation } from '../i18n'
+import { withTranslation, Trans } from '../i18n'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../constants/site'
+import { AppProps } from 'next/app'
 
-function Home({ t }) {
+function Home() {
   const { i18n: { language } } = useContext(I18nContext)
 
   return (
@@ -47,10 +48,10 @@ function Home({ t }) {
         },
         {
           property: 'twitter:image:alt',
-          content: 'Arnol\s avatar'
+          content: 'Arnol\'s avatar'
         }]}
       />
-      <p>{t('home')}</p>
+      <Trans i18nKey={'common:home'}/>
     </div>
   )
 }
