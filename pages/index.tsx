@@ -11,8 +11,8 @@ const Home: I18nPage = () => {
     return (
         <div>
             <NextSeo
-                title={t('headers:home.title')}
-                description={t('headers:home.description')}
+                title={t('home:headers.title')}
+                description={t('home:headers.description')}
                 languageAlternates={(() => {
                     const alternates = [
                         {
@@ -32,8 +32,8 @@ const Home: I18nPage = () => {
                 })()}
                 openGraph={{
                     url: process.env.NEXT_PUBLIC_SITE_URL,
-                    title: `${t('headers:home.title')} | Arnol Codes`,
-                    description: t('headers:home.description'),
+                    title: `${t('home:headers.title')} | Arnol Codes`,
+                    description: t('home:headers.description'),
                     images: [
                         {
                             url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/avatar.png`,
@@ -50,7 +50,7 @@ const Home: I18nPage = () => {
                     },
                     {
                         property: 'twitter:image:alt',
-                        content: t('headers:home.twitter:image:alt')
+                        content: t('home:headers.twitter:image:alt')
                     }
                 ]}
             />
@@ -60,7 +60,7 @@ const Home: I18nPage = () => {
 };
 
 Home.getInitialProps = async () => ({
-    namespacesRequired: ['common', 'headers']
+    namespacesRequired: ['common', 'home']
 });
 
 export default Home;
