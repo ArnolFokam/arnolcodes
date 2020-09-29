@@ -10,15 +10,15 @@
   }
 }*/
 
-const { nextI18NextRewrites } = require('next-i18next/rewrites')
+import { nextI18NextRewrites } from 'next-i18next/rewrites';
 
 const localeSubpaths = {
-  fr: 'fr',
-}
+    fr: 'fr'
+};
 
-module.exports = {
-  rewrites: async () => nextI18NextRewrites(localeSubpaths),
-  publicRuntimeConfig: {
-    localeSubpaths,
-  },
+export async function rewrites() {
+    return nextI18NextRewrites(localeSubpaths);
 }
+export const publicRuntimeConfig = {
+    localeSubpaths
+};

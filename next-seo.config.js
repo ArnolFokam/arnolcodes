@@ -3,10 +3,10 @@ export default {
     openGraph: {
         type: 'website',
         url: process.env.NEXT_PUBLIC_SITE_URL,
-        site_name: 'arnolcodes',
+        site_name: 'arnolcodes'
     },
     twitter: {
         handle: '@FokamArnol',
-        cardType: 'summary',
-    },
-}
+        cardType: 'summary'
+    }
+};
