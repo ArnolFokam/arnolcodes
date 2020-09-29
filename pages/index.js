@@ -5,8 +5,6 @@ import { I18nContext } from 'next-i18next'
 import { withTranslation } from '../i18n'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../constants/site'
 
-export const config = { amp: true }
-
 function Home({ t }) {
   const { i18n: { language } } = useContext(I18nContext)
 
